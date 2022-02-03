@@ -2,7 +2,9 @@ import discord
 from discord.ext import commands
 import nekos
 
-token = "OTM4NDM1Mzg5MDQyMDczNjAx.YfqQEA.ZuEgGj3iujmul6EA0ya79Rp0kI0"
+f = open("token", "r")
+token = f.read()
+f.close()
 
 client = commands.Bot(command_prefix="$")
 
