@@ -1,10 +1,9 @@
 import discord
 from discord.ext import commands
 import nekos
+import os
 
-f = open("token", "r")
-token = f.read()
-f.close()
+token = os.environ.get('token')
 
 client = commands.Bot(command_prefix="$")
 
