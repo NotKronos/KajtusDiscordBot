@@ -12,6 +12,7 @@ client = commands.Bot(command_prefix="$")
 async def ping(ctx):
     await ctx.message.channel.send('Pong!')
 
+    
 @client.command(name="cycki")
 async def cycki(ctx):
     if ctx.message.channel.is_nsfw():
