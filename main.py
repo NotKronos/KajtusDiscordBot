@@ -2,11 +2,17 @@ import discord
 from discord.ext import commands
 import nekos
 import os
+import datetime
 
 token = os.environ.get('token')
 
 client = commands.Bot(command_prefix="$")
 
+
+@client.event
+async def on_ready(): 
+    print(datetime.now() + " Logged in as {0.user}".format(client))
+ 
 
 @client.command(name="ping")
 async def ping(ctx):
